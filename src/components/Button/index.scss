@@ -1,0 +1,38 @@
+.btn_primary{
+    background-color: #6495ed;
+    text-align: center;
+    
+    border: 0px;
+    border-radius: 6px;
+    padding: 4px 6px;
+    cursor: pointer;
+    &:hover{
+        background-color: #5c89db;
+
+    }
+}
+
+.btn_secondary{
+    background-color: rgb(129, 50, 96);
+
+    text-align: center;
+    
+    border: 0px;
+    border-radius: 6px;
+    padding: 4px 6px;
+    cursor: pointer;
+    &:hover{
+        background-color: rgb(100, 40, 78);
+
+    }
+}
+
+.btn_small{
+    font-size: 17px;
+
+}
+
+.btn_medium{
+    font-size: 20px;
+
+}

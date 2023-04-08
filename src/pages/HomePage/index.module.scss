@@ -1,0 +1,9 @@
+.home_page{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+}

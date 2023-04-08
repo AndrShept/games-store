@@ -1,15 +1,15 @@
 import React from 'react'
 import style from './index.module.scss'
 import {gameList} from '../../assets/gameList.js'
-import { GameItems } from '../../components/GameItems'
+import { GameItem } from '../../components/GameItem'
 
 export const HomePage = () => {
   
   return (
 
-    <div className={style}>
+    <div className={style.home_page}>
       
-     {gameList.map(item => <GameItems item={item}/>)}
+     {gameList.map((game) => <GameItem game={game} key={game.id}/>)}
     </div>
   )
 }
