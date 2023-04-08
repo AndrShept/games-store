@@ -1,0 +1,16 @@
+.cart_block {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+}
+
+.cart_icon {
+    cursor: pointer;
+    margin-right: 10px;
+}
+.total_price {
+    font-size: 18px;
+    font-weight: bold;
+
+}
