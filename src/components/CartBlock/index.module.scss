@@ -8,8 +8,11 @@
 .cart_icon {
     cursor: pointer;
     margin-right: 10px;
+    
     &:hover {
       stroke: rgb(230, 88, 170);
+      
+
     }
 }
 .total_price {
