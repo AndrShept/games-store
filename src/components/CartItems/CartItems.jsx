@@ -26,9 +26,8 @@ export const CartItems = ({ items, totalPrice, setIsOpenCart }) => {
       ))}
       <br  className={style}/>
       <div className={style.cart_result}>
-        <Button size='m' type='secondary'>
-          {' '}
-          Оформити заказ{' '}
+        <Button size='m' type='btn_buy'>
+          Оформити заказ
         </Button>
         <span className={style.cart_result_text}>
           Загальна сума {totalPrice} грн

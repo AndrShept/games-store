@@ -8,6 +8,7 @@ export const Button = ({ type, onClick, children, size = 's' }) => {
     "btn": true,
     "btn_primary": type === 'primary',
     "btn_secondary": type === 'secondary',
+    "btn_buy": type === 'btn_buy',
     "btn_small": size === 's',
     "btn_medium": size === 'm',
   });

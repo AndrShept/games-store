@@ -1,5 +1,6 @@
 .btn_primary{
     background-color: #6495ed;
+    // background-color: #6ada4ec2;
 
     text-align: center;
     border: 0px;
@@ -22,6 +23,21 @@
     cursor: pointer;
     &:hover{
         background-color: rgb(100, 40, 78);
+
+    }
+}
+
+.btn_buy{
+    background-color: rgb(33, 194, 41);
+    outline: none;
+border: none;
+    text-align: center;
+    border: 0px;
+    border-radius: 6px;
+    padding: 6px 8px;
+    cursor: pointer;
+    &:hover{
+        background-color: rgb(41, 161, 47);
 
     }
 }
