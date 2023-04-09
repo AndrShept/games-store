@@ -10,12 +10,27 @@ export const CartBlock = () => {
   const [isOpenCart, setIsOpenCart] = React.useState(false);
   const items = useSelector((state) => state.cart.itemInCart);
   const totalPrice = items.reduce((acc, item) => acc + item.price, 0);
+  const sortRef = React.useRef()
+
+  React.useEffect(() => {
+    const handleClickOutside = (event) => {
+      // console.log(event.composedPath());
+      if (sortRef.current && !event.composedPath().includes(sortRef.current)){
+        setIsOpenCart(false);
+      }
+      
+    };
+
+    document.body.addEventListener('click', handleClickOutside);
+
+    return () => document.body.removeEventListener('click', handleClickOutside);
+  }, []);
 
   return (
     
-    <div className={style.cart_block}>
+    <div ref={sortRef} className={style.cart_block}>
       <CountItems count={items.length} />
-      <FiShoppingCart
+      <FiShoppingCart 
         size={28}
         className={style.cart_icon}
         onClick={() => setIsOpenCart(!isOpenCart)}
@@ -23,7 +38,7 @@ export const CartBlock = () => {
       {items.length > 0 ? (
         <span className={style.total_price}>{totalPrice} грн.</span>
       ) : null}
-      {isOpenCart &&  items.map(item => <CartItems items={items} totalPrice={totalPrice} />) }
+      {isOpenCart &&  <CartItems items={items} totalPrice={totalPrice}  /> }
       
     </div>
     

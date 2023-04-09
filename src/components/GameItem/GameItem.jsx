@@ -9,7 +9,7 @@ export const GameItem = ({ game }) => {
     <div className={style.game_item}>
       <GameCover img={game.image}/>
       <div className={style.details}>
-        <span className={style.title}>{game.title}</span>
+        <div className={style.title}>{game.title}</div>
         <div className={style.genre}>
           {
           game.genres.map((genre, i) => <Genre key={i} genre={genre}/>)

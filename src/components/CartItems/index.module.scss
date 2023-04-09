@@ -1,6 +1,6 @@
 .cart_items {
   position: absolute;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   filter: drop-shadow(6px 7px 12px #000);
   height: auto;
   width: 800px;
@@ -56,7 +56,7 @@
 
 .cart_result_text {
   //  display: flex;
- color: rgb(226, 21, 100);
+//  color: rgb(226, 21, 100);
   font-size: 18px;
  font-weight: bold;
   

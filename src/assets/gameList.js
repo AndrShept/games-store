@@ -2,7 +2,7 @@ export const gameList = [
     {
         image: '/game-covers/forza_5.jpeg',
         title: 'Forza Horizon 5',
-        genres: ['Гонки', 'Симулятор', 'Открытый мир'],
+        genres: ['Гонки', 'Симулятор', 'Open World'],
         price: 330,
         video: 'https://www.youtube.com/embed/FYH9n37B7Yw',
         id: 1,
@@ -11,7 +11,7 @@ export const gameList = [
     {
         image: '/game-covers/battlefield_2042.jpg',
         title: 'Battlefield 2042',
-        genres: ['Экшен', 'Шутер', 'Война'],
+        genres: ['Экшен', 'Шутер', 'Війна'],
         video: 'https://www.youtube.com/embed/ASzOzrB-a9E',
         price: 310,
         id: 2,
@@ -20,7 +20,7 @@ export const gameList = [
     {
         image: '/game-covers/life_is_strange_true_colors.jpeg',
         title: 'Life is Strange True Colors',
-        genres: ['Глубокий сюжет', 'Протагонистка'],
+        genres: ['Глубокий сюжет', 'Протагоністка'],
         video: 'https://www.youtube.com/embed/b6CkzwVAr0M',
         price: 420,
         id: 3,
@@ -29,7 +29,7 @@ export const gameList = [
     {
         image: '/game-covers/gta_v.jpeg',
         title: 'Grand Theft Auto V',
-        genres: ['Открытый мир', 'Экшен'],
+        genres: ['Open World', 'Екшен'],
         video: 'https://www.youtube.com/embed/QkkoHAzjnUs',
         price: 201,
         id: 4,
@@ -37,7 +37,7 @@ export const gameList = [
     },
     {
         image: '/game-covers/rainbow_siege.jpeg',
-        title: 'Tom Clancy\'s Rainbow Six® Siege',
+        title: 'Tom Clancy\'s Rainbow Six® Rainbow',
         video: 'https://www.youtube.com/embed/6wlvYh0h63k',
         genres: ['Тактика', 'Шутер'],
         price: 268,
@@ -46,8 +46,8 @@ export const gameList = [
     },
     {
         image: '/game-covers/assassins_creed_valhalla.png',
-        title: 'Assassin’s Creed Valhalla',
-        genres: ['Паркур', 'РПГ', 'Открытый мир'],
+        title: 'Assassin’s Creed Valhalla ',
+        genres: ['Паркур', 'РПГ', 'Open World'],
         video: 'https://www.youtube.com/embed/ssrNcwxALS4',
         price: 372,
         id: 6,

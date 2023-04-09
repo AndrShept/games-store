@@ -4,8 +4,9 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { deleteItemFromCart } from '../../redux/slice/cartSlice';
 import { useDispatch } from 'react-redux';
 import { Button } from '../Button/Button';
-export const CartItems = ({ items, totalPrice }) => {
+export const CartItems = ({ items, totalPrice, setIsOpenCart }) => {
   const dispatch = useDispatch();
+
 
   return (
     <div className={style.cart_items}>
@@ -30,7 +31,7 @@ export const CartItems = ({ items, totalPrice }) => {
           Оформити заказ{' '}
         </Button>
         <span className={style.cart_result_text}>
-          Загальна сума {totalPrice}
+          Загальна сума {totalPrice} грн
         </span>
       </div>
     </div>
