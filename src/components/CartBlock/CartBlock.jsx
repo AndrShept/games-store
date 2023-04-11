@@ -28,15 +28,15 @@ export const CartBlock = () => {
 
   return (
     
-    <div ref={sortRef} className={style.cart_block}>
+    <div ref={sortRef} className={style.cartBlock}>
       <CountItems count={items.length} />
       <FiShoppingCart 
         size={28}
-        className={style.cart_icon}
+        className={style.cartIcon}
         onClick={() => setIsOpenCart(!isOpenCart)}
       />
       {items.length > 0 ? (
-        <span className={style.total_price}>{totalPrice} грн.</span>
+        <span className={style.totalPrice}>{totalPrice} грн.</span>
       ) : null}
       {isOpenCart &&  <CartItems items={items} totalPrice={totalPrice}  /> }
       

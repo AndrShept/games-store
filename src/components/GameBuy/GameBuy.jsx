@@ -21,7 +21,7 @@ export const GameBuy = ({ game }) => {
   }
 
   return (
-    <div className={style.game_buy}>
+    <div className={style.gameBuy}>
       <span className={style.price}>{game.price} грн.</span>
       <Button
         onClick={() => setAddCart()}

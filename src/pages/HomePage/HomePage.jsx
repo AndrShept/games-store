@@ -7,7 +7,7 @@ export const HomePage = () => {
   
   return (
 
-    <div className={style.home_page}>
+    <div className={style.homePage}>
       
      {gameList.map((game) => <GameItem game={game} key={game.id}/>)}
     </div>

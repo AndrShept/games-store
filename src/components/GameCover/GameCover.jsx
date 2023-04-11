@@ -3,6 +3,6 @@ import style from './index.module.scss'
 
 export const GameCover = ({img}) => {
   return (
-    <div><img className={style.game_cover} src={img} alt="" /></div>
+    <div><img className={style.gameCover} src={img} alt="" /></div>
   )
 }

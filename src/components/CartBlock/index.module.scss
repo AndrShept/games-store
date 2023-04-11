@@ -1,11 +1,11 @@
-.cart_block {
+.cartBlock {
   position: relative;
   display: flex;
   align-items: center;
 
 }
 
-.cart_icon {
+.cartIcon {
     cursor: pointer;
     margin-right: 10px;
     
@@ -15,7 +15,7 @@
 
     }
 }
-.total_price {
+.totalPrice {
     font-size: 18px;
     font-weight: bold;
 

@@ -7,9 +7,9 @@ export const Header = () => {
   return (
     <div className={style.header}>
       <div className={style.wrapper}>
-        <Link  to='/' className={style.store_title}>Game Store</Link>
+        <Link  to='/' className={style.storeTitle}>Game Store</Link>
       </div>
-      <div className={style.cart_btn_wrapper}>
+      <div className={style.cartBtnWrapper}>
         <CartBlock/>
       </div>
     </div>

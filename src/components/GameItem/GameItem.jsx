@@ -6,7 +6,7 @@ import { Genre } from '../Genre';
 export const GameItem = ({ game }) => {
   return (
     
-    <div className={style.game_item}>
+    <div className={style.gameItem}>
       <GameCover img={game.image}/>
       <div className={style.details}>
         <div className={style.title}>{game.title}</div>
