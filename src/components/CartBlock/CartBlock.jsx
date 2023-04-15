@@ -5,32 +5,27 @@ import { CartItems } from '../CartItems';
 import { useSelector } from 'react-redux';
 import { CountItems } from '../CountItems';
 
-
 export const CartBlock = () => {
   const [isOpenCart, setIsOpenCart] = React.useState(false);
   const items = useSelector((state) => state.cart.itemInCart);
   const totalPrice = items.reduce((acc, item) => acc + item.price, 0);
-  const sortRef = React.useRef()
+  const Ref = React.useRef();
 
   React.useEffect(() => {
     const handleClickOutside = (event) => {
-      // console.log(event.composedPath());
-      if (sortRef.current && !event.composedPath().includes(sortRef.current)){
+      if (Ref.current && !event.composedPath().includes(Ref.current)) {
         setIsOpenCart(false);
       }
-      
     };
-
     document.body.addEventListener('click', handleClickOutside);
-
-    return () => document.body.removeEventListener('click', handleClickOutside);
-  }, []);
+    const json = JSON.stringify(items);
+    localStorage.setItem('cart', json);
+  }, [items]);
 
   return (
-    
-    <div ref={sortRef} className={style.cartBlock}>
-      <CountItems count={items.length} />
-      <FiShoppingCart 
+    <div ref={Ref} className={style.cartBlock}>
+      {items.length > 0 && <CountItems count={items.length} />}
+      <FiShoppingCart
         size={28}
         className={style.cartIcon}
         onClick={() => setIsOpenCart(!isOpenCart)}
@@ -38,9 +33,7 @@ export const CartBlock = () => {
       {items.length > 0 ? (
         <span className={style.totalPrice}>{totalPrice} грн.</span>
       ) : null}
-      {isOpenCart &&  <CartItems items={items} totalPrice={totalPrice}  /> }
-      
+      {isOpenCart && <CartItems items={items} totalPrice={totalPrice} />}
     </div>
-    
   );
 };

@@ -5,11 +5,12 @@ import { createSlice } from '@reduxjs/toolkit';
 const cartSlice = createSlice({
     name: 'cart',
     initialState: {
-        itemInCart: []
+        itemInCart: JSON.parse(localStorage.getItem('cart')) || []
     },
     reducers: {
         setItemInCart: (state, action) => {
             state.itemInCart.push(action.payload)
+            
         },
         deleteItemFromCart: (state, action) => {
             state.itemInCart = state.itemInCart.filter(game => game.id !== action.payload)

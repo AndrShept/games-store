@@ -6,4 +6,9 @@
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     margin-bottom: 5px;
+    filter: brightness(90%) saturate(70%);
+    &:hover{
+        filter: brightness(100%) saturate(100%);
+    }
 }
+

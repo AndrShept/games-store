@@ -1,4 +1,5 @@
 import { Header } from './components/Header';
+import { GameInfo } from './pages/GameInfo';
 import { HomePage } from './pages/HomePage';
 import { Routes, Route } from 'react-router-dom';
 
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<HomePage />}></Route>
+        <Route path='/info' element={<GameInfo />}></Route>
       </Routes>
     </div>
   );
