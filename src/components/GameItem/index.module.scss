@@ -12,12 +12,17 @@
   &:not(:last-child) {
     margin-bottom: 30px;
     margin-right: 30px;
+    
   }
 
   &:hover{
     background-color: rgba(36, 37, 41, 0.6);
     transition: .2s;
-    transform: translateX(5px);
+    // transform: translateX(5px);
+    transform: scale(1.02);
+    // box-shadow: 12px 12px 2px 1px rgba(69, 18, 134, 0.363);
+    
+    
     
   }
 }
