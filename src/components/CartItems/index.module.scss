@@ -12,8 +12,6 @@
   z-index: 2;
   top: 40px;
   right: 0px;
-  
-
 }
 
 .item {
@@ -24,18 +22,14 @@
 .itemImg {
   height: 170px;
   width: 300px;
-  margin-top: 10px;
+  padding: 10px;
 }
 .img {
   height: 100%;
   width: 100%;
   background-size: cover;
   background-position: center;
-  // width: 100%;
-  // background-size: cover;
-  // background-position: center;
   border-radius: 10px;
-
   margin-bottom: 5px;
 }
 
@@ -45,33 +39,28 @@
 }
 
 .cartResult {
-    border-top: 1px solid white;
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
- 
+  border-top: 1px solid white;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-   margin-top: 10px;
+  margin-top: 10px;
 }
 
 .cartResultText {
-  //  display: flex;
-//  color: rgb(226, 21, 100);
   font-size: 18px;
- font-weight: bold;
-  
+  font-weight: bold;
+  background-color: #00000033;
+  padding: 10px;
+  border-radius: 5px;
 }
-.deleteIcon{
-    
-    cursor: pointer;
-    margin-right: 10px;
-    
-    &:hover {
-      stroke: rgb(230, 88, 170);
-      fill: rgb(230, 88, 170);
+.deleteIcon {
+  cursor: pointer;
+  margin-right: 10px;
 
-    }
-    
+  &:hover {
+    stroke: rgb(230, 88, 170);
+    fill: rgb(230, 88, 170);
+  }
 }
-

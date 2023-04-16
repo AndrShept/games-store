@@ -1,16 +1,24 @@
 import React from 'react';
 import style from './index.module.scss';
 import { GameCover } from '../GameCover/GameCover';
-import { GameBuy } from '../GameBuy';
 import { Genre } from '../Genre';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setItemsInfo } from '../../redux/slice/itemInfoSlice';
+import { GameBuy } from '../GameBuy/GameBuy';
 export const GameItem = ({ game }) => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const handleClick = () => {
+    dispatch(setItemsInfo(game));
+    navigate(`app/${game.title}`);
+  };
   return (
-    // <Link to="/info">
     <div className={style.gameItem}>
-      <Link to='/info'>
-        <GameCover game={game} />
-      </Link>
+      <div className={style.block}>
+        <GameCover game={game} handleClick={handleClick} />
+      </div>
+
       <div className={style.details}>
         <div className={style.title}>{game.title}</div>
         <div className={style.genre}>
@@ -23,6 +31,5 @@ export const GameItem = ({ game }) => {
         </div>
       </div>
     </div>
-    // </Link>
   );
 };

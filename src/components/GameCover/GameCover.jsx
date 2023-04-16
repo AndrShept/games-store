@@ -1,10 +1,10 @@
 import React from 'react';
 import style from './index.module.scss';
 
-export const GameCover = ({ game }) => {
+export const GameCover = ({ game , handleClick}) => {
   return (
     <div>
-      <img className={style.gameCover} src={game.image} alt='' />
+      <img onClick={handleClick} className={style.gameCover} src={game.image} alt='' />
     </div>
   );
 };

@@ -5,14 +5,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setItemInCart, deleteItemFromCart } from '../../redux/slice/cartSlice';
 
 export const GameBuy = ({ game }) => {
-  
   const items = useSelector((state) => state.cart.itemInCart);
   const itemsInCart = items.some((item) => item.id === game.id);
   const dispatch = useDispatch();
   const setAddCart = () => {
     if (!itemsInCart) {
       dispatch(setItemInCart(game));
-      
     } else {
       dispatch(deleteItemFromCart(game.id));
     }
