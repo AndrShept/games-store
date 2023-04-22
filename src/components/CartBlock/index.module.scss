@@ -4,19 +4,38 @@
   align-items: center;
 
 }
-
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .cartIcon {
     cursor: pointer;
     margin-right: 10px;
-    
+    // animation: opacity 2s ease-in ;
     &:hover {
       stroke: rgb(230, 88, 170);
       
 
     }
+
+
 }
 .totalPrice {
     font-size: 18px;
     font-weight: bold;
 
 }
+
+.active{
+  stroke: rgb(230, 88, 170);
+  // background-color: rgba(59, 56, 58, 0.541);
+// padding: 10px;
+}
+

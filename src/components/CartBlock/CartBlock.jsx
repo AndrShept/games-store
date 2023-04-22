@@ -4,7 +4,7 @@ import { FiShoppingCart } from 'react-icons/fi';
 import { CartItems } from '../CartItems';
 import { useSelector } from 'react-redux';
 import { CountItems } from '../CountItems';
-
+import cn from 'classnames'
 export const CartBlock = () => {
   const [isOpenCart, setIsOpenCart] = React.useState(false);
   const items = useSelector((state) => state.cart.itemInCart);
@@ -23,11 +23,16 @@ export const CartBlock = () => {
   }, [items]);
 
   return (
-    <div ref={Ref} className={style.cartBlock}>
+    <div ref={Ref} className={cn([style.cartBlock],{
+      [style.active]:isOpenCart
+    })}
+>
       {items.length > 0 && <CountItems count={items.length} />}
       <FiShoppingCart
         size={28}
-        className={style.cartIcon}
+        className={cn([style.cartIcon], {
+          [style.active]: isOpenCart
+        })}
         onClick={() => setIsOpenCart(!isOpenCart)}
       />
       {items.length > 0 ? (
