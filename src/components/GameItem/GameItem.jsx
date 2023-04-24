@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setItemsInfo } from '../../redux/slice/itemInfoSlice';
 import { GameBuy } from '../GameBuy/GameBuy';
+import { motion } from 'framer-motion';
 export const GameItem = ({ game }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -14,7 +15,11 @@ export const GameItem = ({ game }) => {
     navigate(`app/${game.title}`);
   };
   return (
-    <div className={style.gameItem}>
+    <motion.div
+      className={style.gameItem}
+      whileHover={{ scale: 1.03 }}
+      // whileTap={{ scale: 0.9 }}
+    >
       <div className={style.block}>
         <GameCover game={game} handleClick={handleClick} />
       </div>
@@ -30,6 +35,6 @@ export const GameItem = ({ game }) => {
           <GameBuy game={game} />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

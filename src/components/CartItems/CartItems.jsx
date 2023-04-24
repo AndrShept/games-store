@@ -5,12 +5,21 @@ import { deleteItemFromCart } from '../../redux/slice/cartSlice';
 import { useDispatch } from 'react-redux';
 import { Button } from '../Button/Button';
 import { EmptyBasket } from '../EmptyBasket';
+import { motion, AnimatePresence } from 'framer-motion';
 export const CartItems = ({ items, totalPrice, setIsOpenCart }) => {
+
   const dispatch = useDispatch();
 
-  return (
-
-    items.length > 0 ? <div className={style.cartItems}>
+  return items.length > 0 ? (
+    <AnimatePresence>
+    <motion.div
+      className={style.cartItems}
+      transition={{  duration: 0.4 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      
+    >
       {items.length > 0 &&
         items.map((item) => (
           <div key={item.id} className={style.item}>
@@ -39,6 +48,9 @@ export const CartItems = ({ items, totalPrice, setIsOpenCart }) => {
           Загальна сума {totalPrice} грн
         </span>
       </div>
-    </div> : <EmptyBasket/>
+    </motion.div>
+    </AnimatePresence>
+  ) : (
+    <EmptyBasket />
   );
 };
